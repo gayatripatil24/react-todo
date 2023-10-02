@@ -17,7 +17,6 @@ const TodoPage = () => {
     const getData = async () => {
         axios.get('https://jsonplaceholder.typicode.com/todos').then(async (response) => {
             fullData = response.data
-            console.log("fullData-- ",fullData);
             await setData(response.data)
         });
     };
@@ -28,8 +27,6 @@ const TodoPage = () => {
 
         
         // let updatedList = [...data];
-        // console.log("updatedList",updatedList);
-        // console.log("fullData--After ",fullData);
         let updatedList = fullData;
         updatedList = updatedList.filter((item) => {
           return item.title.toLowerCase().indexOf(value.toLowerCase()) !== -1;
