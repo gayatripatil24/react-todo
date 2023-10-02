@@ -3,11 +3,12 @@ import style from './TodoPage.css';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
-
+var fullData={}
 const TodoPage = () => {
     const [data, setData] = useState([]);
     const [searchText, setSearchText] = useState('');
     const navigate = useNavigate();
+    
 
     useEffect(() => {
         getData();
@@ -15,6 +16,8 @@ const TodoPage = () => {
 
     const getData = async () => {
         axios.get('https://jsonplaceholder.typicode.com/todos').then(async (response) => {
+            fullData = response.data
+            console.log("fullData-- ",fullData);
             await setData(response.data)
         });
     };
@@ -24,7 +27,10 @@ const TodoPage = () => {
         setSearchText(value);
 
         
-        let updatedList = [...data];
+        // let updatedList = [...data];
+        // console.log("updatedList",updatedList);
+        // console.log("fullData--After ",fullData);
+        let updatedList = fullData;
         updatedList = updatedList.filter((item) => {
           return item.title.toLowerCase().indexOf(value.toLowerCase()) !== -1;
         });
