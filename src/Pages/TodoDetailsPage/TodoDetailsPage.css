@@ -1,0 +1,17 @@
+.cardStyle1 {
+
+    border: 1px solid black;
+    height: 15rem;
+    width: 31rem;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 5rem;
+}
+
+.outerDiv1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20rem;
+}
+

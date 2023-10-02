@@ -1,0 +1,17 @@
+.cardStyle {
+    border: 1px solid black;
+    height: 10rem;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+    padding-top: 50px;
+    width: 35%;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.outerDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
