@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# TODO app code challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a base (you get started with react build and hot reloading already setup) for a simple Reactjs coding challenge. Please read carefully the below instructions.
+There is a section on how to edit and submit your challenge, and a following section explaining the requirements.
 
-## Available Scripts
 
-In the project directory, you can run:
+# IMPORTANT! READ before starting
+By default for anonymous users (non logged in), your code and app will only remain on glitch.com for 5 days. In order to not lose your challenge, please create a glitch.com account and log in to glitch.com before proceeding.
 
-### `npm start`
+The following README contains instructions to guide you through the coding challenge, please read them carefully.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to create and submit your app using glitch
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+0. **Login to glitch**: make sure you are logged in to glitch.com
 
-### `npm test`
+1. **Clone**: Go to this URL: [https://glitch.com/~todos-search-app](https://glitch.com/~todos-search-app) and click the `Remix your own` button to clone the code. This will copy all the code to a new, randomly generated URL (e.g. https://glitch.com/edit/#!/capable-toothpaste). This is your URL to code on, no other candidates will have this URL.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Code**: You can edit the code directly in the Glitch editor or use your editor of choice (VSCode, Sublime, etc) and copy paste the files into Glitch. Git import and export is also available in the Tools menu on the bottom left. How you edit the code is entirely up to you, so long as your finished work is viewable at the URL created in the previous step.
 
-### `npm run build`
+> **NOTE**: Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Turn in**: When you finish coding, send your URL to us so we can review your code.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Glitch help!
 
-### `npm run eject`
+This challenge is hosted on glitch please see below for any help on how to use it.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[Glitch](https://glitch.com) is a friendly community where millions of people come together to build web apps and websites.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Want more details about React on Glitch? We've got a [Help Center article](https://help.glitch.com/kb/article/112) for you.
+- Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# this challenge's requirements
 
-## Learn More
+The react app should have 2 pages:
+- a top page (route: '/') for displaying/searching a list of TODO items
+- a "todo details" (route: '/todos/<todo item number>') page to display the details of a specific todo item
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Top page requirements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- the page should display the list of todo items fetched from the https://jsonplaceholder.typicode.com/todos API (visit the URL to see the data format)
+- items should be displayed in a grid, with each card having 250px width, and 20px between the cards. Those sizes are fixed for all screen sizes.
+- Design should be responsive to be useable on various screen sizes, down to mobile phone.
+- card background should be 'green' for items which are completed, and 'crimson' for items which are not completed
+- each card should show the todo item number, and the first 20 characters of the item title
+- the top of the page should have an search input field. When text in input inside it, only items which have a title containing the search text should be be displayed. When nothing is input in the field the whole list of items is displayed.
+- clicking on a todo item's card should go to the todo item details page for that item
+  
+Example:
+![screenshot](https://cdn.glitch.com/69d5f470-9f1e-492f-a706-2218599bf06d%2FScreen%20Shot%202021-06-14%20at%2011.28.49.png?v=1623637831386)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## todo item details page requirements
 
-### Analyzing the Bundle Size
+- the page should display the following fields
+  - user name
+  - item number
+  - item title
+- the data comes from the 2 following APIs:
+  - todo item details: `https://jsonplaceholder.typicode.com/todos/{item #}` (eg. https://jsonplaceholder.typicode.com/todos/1)
+  - user details `https://jsonplaceholder.typicode.com/users/{user id}` (eg. https://jsonplaceholder.typicode.com/users/1)
+- for this page, look and feel is not specifically considered in this challenge
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![screenshot](https://cdn.glitch.com/69d5f470-9f1e-492f-a706-2218599bf06d%2FScreen%20Shot%202021-06-14%20at%2011.40.10.png?v=1623638430344)
+  
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## non-functional requirements
+  
+On top of the requirements above, items we will be looking at include:
+- Code quality (readability, use of modern syntax, linting...)
+- Support for edge cases (API error, API slow to respond...)
+- app architecture (folder structure, code spliting, ...)
+- automated test would be a big plus (they cannot run on glitch, so you'd most likely develop locally from you github repo, then sync it to glitch using the import/export function)
