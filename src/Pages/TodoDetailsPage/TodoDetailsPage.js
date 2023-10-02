@@ -26,8 +26,8 @@ const TodoDetailsPage = () => {
         <>
             <div className='outerDiv1'>
                <div className='cardStyle1'>
-                    <span>User name: {userdata.username}</span> <br />
                     <span>Item number: {data.id}</span> <br />
+                    <span>Creater: {userdata.username}</span> <br />
                     <span>Item title: {data.title}</span>
                 </div>
             </div>

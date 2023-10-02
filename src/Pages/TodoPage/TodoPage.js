@@ -48,7 +48,7 @@ const TodoPage = () => {
                 {data && data.map((obj, i) => {
                     return (
                         <div className='cardStyle' style={obj.completed === true ? {background: 'green'} : {background: 'red'}} onClick={() => onSelectCard(obj.id, obj.userId)}>
-                            <div className='internalDiv'>{obj.id}</div>
+                            <div className='internalDiv'>#{obj.id}</div>
                             <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
                                 {obj.title.length > 20 ? obj.title.substring(0, 20) + "..." : obj.title}
                             </span>
